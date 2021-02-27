@@ -1,0 +1,32 @@
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+const prefix = '!';
+const token = 'ODE0NjQ2ODk2NDkyNDEyOTQ4.YDg5Cw.CjG1cWe_v5rGxKl4jtfrzQpvT-k';
+
+bot.on('ready' , () => {
+    console.log(`$(bot.user.tag) successfully logged in!`)
+    bot.user.setActivity('RiskBotStudios', ({type: "PLAYING"}))
+})
+
+bot.on('message', message => {
+    let msg = message;
+    if(msg.content == '!help'){
+        msg.channel.send(`RiskBotStudios Bot currently has 0 commands, try running this on the fifth of March`)
+            }
+}) 
+bot.on('message', message => {
+    let msg = message;
+    if(msg.content == 'is duncan gay?'){
+        msg.channel.send(`No`)
+            }
+}) 
+bot.on('message', message => {
+    let msg = message;
+    if(msg.content == 'is ronan gay?'){
+        msg.channel.send(`yes, its so obvious`)
+            }
+}) 
+
+
+
+bot.login(token)
